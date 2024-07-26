@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfAppSlider.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppSlider"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Red" Width="50"/>
+                <Slider Name="sliderRed" Minimum="0" Maximum="255" TickFrequency="5" IsSnapToTickEnabled="True" ValueChanged="Slider_ValueChanged" Width="200"/>
+                <Label Name="labelRedValue" Width="50"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="labelGreenValue1" Content="Green" Width="50"/>
+                <Slider Name="sliderGreen" Minimum="0" Maximum="255" TickFrequency="5" IsSnapToTickEnabled="True" ValueChanged="Slider_ValueChanged" Width="200"/>
+                <Label Name="labelGreenValue" Width="50"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="labelBlueValue1" Content="Blue" Width="50"/>
+                <Slider x:Name="sliderBlue" Minimum="0" Maximum="255" TickFrequency="5" IsSnapToTickEnabled="True" ValueChanged="Slider_ValueChanged" Width="200"/>
+                <Label x:Name="labelBlueValue" Width="50"/>
+            </StackPanel>
+            <GroupBox Header="Color Mode" Margin="0,20,0,0">
+                <StackPanel>
+                    <RadioButton Name="radioNormal" Content="Normal" IsChecked="True" Checked="RadioButton_Checked"/>
+                    <RadioButton Name="radioInvert" Content="Invert" Checked="RadioButton_Checked"/>
+                    <RadioButton Name="radioGrayscale" Content="Grayscale" Checked="RadioButton_Checked"/>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</Window>
